@@ -17,4 +17,13 @@ public class Product {
     private int price;
     private String sku;
     private LocalDate fechaRegistro;
+    public Product(Long id, String name, String tipo, int price) {
+        this.id = id;
+        this.name = name;
+        Category category = new Category();
+        category.setName(tipo);
+        this.category = category;
+        this.price = price;
+    }
 }
+
